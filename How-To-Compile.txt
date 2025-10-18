@@ -30,7 +30,7 @@ export ARCH=${KERNEL_ARCH}
 export TARGET_INCLUDES=${TARGET_KERNEL_MAKE_CFLAGS}
 export TARGET_LINCLUDES=${TARGET_KERNEL_MAKE_LDFLAGS}
 
-export TARGET_KERNEL_MAKE_ENV+="LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy CC=${SOURCE_ROOT}/prebuilts/clang/host/linux-x86/clang-r383902b/bin/clang"
+export TARGET_KERNEL_MAKE_ENV+="LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy CC=${SOURCE_ROOT}/prebuilts/clang-r383902b/bin/clang"
 
 cd ${KERNEL_DIR} && \
 ${MAKE_PATH}make O=${OUT_DIR} ${TARGET_KERNEL_MAKE_ENV} HOSTLDFLAGS="${TARGET_LINCLUDES}" ARCH=${ARCH} CROSS_COMPILE=${CROSS_COMPILE} ${DEFCONFIG}
