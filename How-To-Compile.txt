@@ -6,7 +6,6 @@
 
 (3)mkdir prebuild;
 git clone https://android.googlesource.com/platform/prebuilts/build-tools;
-git clone -b android11-qpr3-release https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9
 wget -O - https://github.com/ravindu644/Android-Kernel-Tutorials/releases/download/toolchains/arm-gnu-toolchain-14.2.rel1-x86_64-aarch64-none-linux-gnu.tar.xz | tar -xJ
 mkdir -p clang-r383902b && wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/0e9e7035bf8ad42437c6156e5950eab13655b26c/clang-r383902b.tar.gz | tar -xz -C clang-r383902b
 
