@@ -7,19 +7,19 @@
 (3)mkdir prebuild;
 git clone https://android.googlesource.com/platform/prebuilts/build-tools;
 git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86;
-git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9.1
+git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9
 
 (4) add toolchain path to PATH environment variable
 
 2. export some environment variable and build the kernel and dtb ,oppo6785 instead of oppo6769 follow for mobile model RMX2151 RMX2183 RMX2161 RMX2001 RMX2001 RMX2003 RMX2002 RMX2156
 
 export SOURCE_ROOT=~/workspace/source
-export DEFCONFIG=oppo6769_defconfig
-export COMPILE_PLATFORM=oppo6769
-export OPPO_COMPILE_PLATFORM=oppo6769
+export DEFCONFIG=oppo6771_defconfig
+export COMPILE_PLATFORM=oppo6771
+export OPPO_COMPILE_PLATFORM=oppo6771
 export PATH=${SOURCE_ROOT}/prebuilts/clang/host/linux-x86/clang-r383902b/bin:${SOURCE_ROOT}/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin:/usr/bin:/bin:$PATH
 export MAKE_PATH=${SOURCE_ROOT}/prebuilts/build-tools/linux-x86/bin/
-export CROSS_COMPILE=${SOURCE_ROOT}/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9.1/bin/aarch64-linux-androidkernel-
+export CROSS_COMPILE=${SOURCE_ROOT}/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-androidkernel-
 export KERNEL_ARCH=arm64
 export KERNEL_DIR=${SOURCE_ROOT}/kernel-4.14
 export KERNEL_OUT=${KERNEL_DIR}/../kernel_out
